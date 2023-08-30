@@ -1,0 +1,135 @@
+@import "../../styles/variables";
+@import "../../styles/breakpoints";
+
+.header {
+  position: relative;
+  padding: 10px 0;
+  min-height: 72px;
+
+  @include respond(lg) {
+    width: 100vw;
+    margin: 0;
+    padding: 10px 20px;
+  }
+
+  @include respond(msm) {
+    min-height: 130px;
+  }
+
+  @include respond(sm) {
+    padding: 10px 10px;
+  }
+
+  .nav {
+    width: 100%;
+    height: 72px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    position: absolute;
+
+    @include respond(lg) {
+      width: 95%;
+    }
+
+    @include respond(msm) {
+      padding-top: 10px;
+      grid-template-rows: 1fr 54px 1fr;
+      gap: 10px;
+    }
+
+    &-logo {
+      max-width: 14rem;
+      height: 3rem;
+      object-fit: cover;
+    }
+
+    &-form {
+      display: flex;
+      grid-column: 2/7;
+      padding: 0 10px;
+      margin-left: 2rem;
+      border-radius: 8px;
+      border: $form-border;
+      box-shadow: $form-boxshadow;
+
+      @include respond(msm) {
+        grid-row: 2/3;
+        grid-column: 1/-1;
+        margin: 0;
+      }
+
+      & > input {
+        flex: 1;
+        border: none;
+        height: 54px;
+        padding: 0 10px;
+        font-family: inherit;
+        font-size: 16px;
+        font-weight: 500;
+        outline: none;
+      }
+
+      & > button {
+        background-color: transparent;
+      }
+    }
+
+    &-searchList {
+      grid-row: 2/3;
+      grid-column: 2/7;
+      margin-left: 20px;
+      margin-top: 2px;
+
+      @include respond(msm) {
+        grid-row: 3/4;
+        grid-column: 1/-1;
+        margin: 0;
+      }
+    }
+
+    &-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      white-space: nowrap;
+      position: absolute;
+      right: 0;
+
+      @include respond(msm) {
+        grid-row: 1/2;
+      }
+
+      &--logout {
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        border-radius: 5px;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        border: $form-border;
+        box-shadow: $form-boxshadow;
+
+        & > span {
+          display: inline-block;
+          padding: 10px 20px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $gray-hover;
+          }
+        }
+      }
+    }
+
+    &-cart {
+      font-size: 14px;
+      font-weight: 600;
+      position: absolute;
+      bottom: 65%;
+      margin-bottom: 5px;
+    }
+  }
+}

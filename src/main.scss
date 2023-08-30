@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import "./styles/commonClasses.scss";
+@import "./styles/breakpoints";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  @include respond(xl) {
+    font-size: 56.25%;
+  }
+
+  @include respond(lg) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

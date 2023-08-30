@@ -1,0 +1,53 @@
+@import "../../styles/variables";
+
+.dishcard {
+  width: 350px;
+  min-height: 350px;
+  padding: 10px;
+  border-radius: 12px;
+  transition: box-shadow 0.2s;
+
+  &-link {
+    width: 100%;
+    height: auto;
+
+    & > img {
+      width: 328px;
+      height: 248px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+  }
+
+  &-brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & > h1 {
+      font-size: 20px;
+      margin: 6px 0;
+      color: $black;
+    }
+  }
+
+  &-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    color: $text-gray;
+  }
+
+  &-border {
+    width: 100%;
+    height: 1px;
+    background-color: $card-gray;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  &:hover {
+    border: 1px solid $card-gray;
+    box-shadow: $hover-shadow;
+  }
+}

@@ -1,0 +1,12 @@
+@import "../../styles/breakpoints";
+
+.dishes {
+  padding-top: 32px;
+  @include respond(lg) {
+    padding: 40px 10px;
+  }
+  &-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}

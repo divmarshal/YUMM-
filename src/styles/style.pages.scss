@@ -1,0 +1,73 @@
+@import "../styles/breakpoints";
+@import "../styles/variables";
+
+.dishCategory {
+  padding-top: 32px;
+  @include respond(lg) {
+    padding: 40px 10px;
+  }
+
+  &-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
+
+.dishDetail {
+  padding-top: 32px;
+  @include respond(lg) {
+    padding: 40px 10px;
+  }
+  & > img {
+    width: 100%;
+    height: 40rem;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  &-brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & > h1 {
+      font-size: 20px;
+      margin: 6px 0;
+      color: $black;
+    }
+  }
+
+  &-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    color: $text-gray;
+    margin-top: 5px;
+  }
+
+  &-btn {
+    width: auto;
+    height: 36px;
+    margin-top: 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 12px;
+    border: 1px solid $text-gray;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+.modalItems {
+  padding-top: 32px;
+  @include respond(lg) {
+    padding: 0px 10px;
+  }
+  &-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}

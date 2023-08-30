@@ -1,0 +1,12 @@
+@import "../../styles/variables";
+@import "../../styles/breakpoints";
+
+.searchList {
+  width: 100%;
+  min-height: 20rem;
+  border-radius: 12px;
+  padding: 20px 12px;
+  background-color: $white;
+  z-index: 100;
+  box-shadow: $hover-shadow;
+}

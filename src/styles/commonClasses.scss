@@ -1,0 +1,22 @@
+@import "../styles/breakpoints";
+
+.max-width {
+  max-width: 110rem;
+  margin: 0 auto;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.heading {
+  font-size: 30px;
+  padding-bottom: 32px;
+  @include respond(lg) {
+    padding-bottom: 24px;
+  }
+  @include respond(sm) {
+    padding-bottom: 12px;
+    font-size: 24px;
+  }
+}

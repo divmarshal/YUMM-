@@ -1,0 +1,51 @@
+@import "../../../styles/variables";
+
+.filterModal {
+  min-width: 30rem;
+  background-color: $white;
+  border-radius: 4px;
+  padding: 12px;
+  &-header {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & > h1 {
+      margin-left: 12px;
+      font-size: 18px;
+    }
+    & > button {
+      background-color: transparent;
+    }
+  }
+  &-form {
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    & > label {
+      font-size: 20px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+  &-btn {
+    width: auto;
+    height: 36px;
+    border-radius: 4px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    padding: 0 24px;
+    margin-top: 12px;
+    margin-left: 12px;
+    background-color: $red-dark;
+    color: $white;
+
+    filter: brightness(120%);
+    &:hover {
+      filter: brightness(100%);
+    }
+  }
+}

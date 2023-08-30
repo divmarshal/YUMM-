@@ -1,0 +1,25 @@
+@import "../../styles/variables.scss";
+@import "../../styles/breakpoints";
+
+.filter {
+  padding-top: 20px;
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  color: $text-gray;
+  @include respond(lg) {
+    padding: 20px 10px;
+  }
+  @include respond(sm) {
+    padding: 10px 10px;
+  }
+
+  &-item {
+    border: $filter-border;
+    box-shadow: $filter-boxshadow;
+    background-color: $white;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background-color 0.1s;
+  }
+}
